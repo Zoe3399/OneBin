@@ -71,12 +71,14 @@ The smart trash bin utilizes a camera sensor inside the bin to transmit capacity
 
 ## 🛠 Tech Stack
 
-1. WEB
+1. WEB <br>
    <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
    <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
    <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
 
-3. IOT : MQTT, Python, Arduino, RaspberryPi
-4. DB : MySQL, MQTT, Flask
+3. IOT  <br>
+ MQTT, Python, Arduino, RaspberryPi
+4. DB  <br>
+ MySQL, MQTT, Flask
