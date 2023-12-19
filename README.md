@@ -77,7 +77,6 @@ The smart trash bin utilizes a camera sensor inside the bin to transmit capacity
    <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=Python&logoColor=white"/>
    <img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
-   
-   , Python
+
 3. IOT : MQTT, Python, Arduino, RaspberryPi
 4. DB : MySQL, MQTT, Flask
