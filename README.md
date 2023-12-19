@@ -26,6 +26,19 @@ The goal of this project is to develop a system that utilizes autonomous driving
 
 - Recently, robots have been introduced, and two robot vacuum cleaners are being operated at Incheon International Airport. However, this is being conducted as a pilot project. Airports experience a higher rate of trash generation due to passenger movements, resulting in faster turnover of trash bins compared to shopping malls. The amount of trash handled also varies depending on the size of the airport, indicating that the required quantity of smart trash bins may vary based on the facility's scale and nature.
 
+## 📊 STP Strategy
+
+#### Segmentation (시장 세분화) 
+- It is expected to be classified as a type of B2B market. Rather than focusing on consumer preferences or needs, the strategy is to apply technology to mass-produce products and engage in business-to-business transactions.
+
+#### Targeting (표적 시장)
+- It is anticipated that sales and contracts will be targeted towards companies operating large facilities. In the case of airports or train stations, transparent disposal of trash bins is required, while in the case of complex shopping malls or large stores, aesthetics are emphasized, and products are expected to be produced and sold accordingly.
+
+#### Positioning(포지셔닝)
+- Due to the scarcity of existing products in the market, it is analyzed that a company needs a strategy to establish the brand's character and pursue specific features tailored to each sales outlet.
+- ex) In the case of usage in airports or train stations, functionality and transparency inside the bins are emphasized rather than aesthetics.
+- ex) In the case of usage in complex shopping malls or stores, aesthetics and ease of use are pursued.
+
 <br>
 
 ## 📑 Overall Project Contents
