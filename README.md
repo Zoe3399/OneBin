@@ -44,9 +44,7 @@ The goal of this project is to develop a system that utilizes autonomous driving
 ## 📑 Overall Project Contents
 We have developed a smart trash bin by attaching sensors inside the bin and connecting it to an autonomous RC car at the bottom of the bin. 
 The smart trash bin utilizes a camera sensor inside the bin to transmit capacity information to a central computer. This information is then controlled manually or automatically to move the trash bin along a predetermined route.
-
 <br>
-
 #### 1. Install a Raspberry Pi camera sensor on the top of the trash bin and utilize the AWS OCR library to measure the trash level in real-time.
 
 #### 2. Create a self-driving vehicle based on line tracing using Arduino, combining infrared sensors, ultrasonic sensors, and 4 DC motors.
