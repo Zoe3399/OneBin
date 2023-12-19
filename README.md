@@ -17,10 +17,10 @@ Existing smart trash bins for households and businesses have limited functionali
 ## 🔍 Analysis Objective
 The goal of this project is to develop a system that utilizes autonomous driving technology in trash bins, allowing them to automatically return to designated collection points for emptying when they reach 100% capacity. This aims to create an efficient waste collection system and promote environmental protection.
 
-=
-## 📑 Overall Project Contents
 
-This project aims to efficiently manage waste disposal in large areas by automatically moving trash bins to designated collection points when they are full, based on sensor readings. Real-time data on the trash level and location of multiple bins is stored in a database, allowing for centralized control.
+## 📑 Overall Project Contents
+We have developed a smart trash bin by attaching sensors inside the bin and connecting it to an autonomous RC car at the bottom of the bin. 
+The smart trash bin utilizes a camera sensor inside the bin to transmit capacity information to a central computer. This information is then controlled manually or automatically to move the trash bin along a predetermined route.
 
 #### 1. Utilizing a Raspberry Pi and AWS OCR library, the project measures the trash level using camera sensors.
 
