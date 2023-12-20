@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>로그인 페이지</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://cdn.example.com/pattern.png'); /* 패턴 이미지 URL */
+    background-repeat: repeat;
+    margin: 0;
+    padding: 0;
+  }
+
+  .login-container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 400px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #00a652;
+    border-radius: 8px;
+}
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #00a652;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 16px 20px;
+    margin: 16px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #e8f5e9;
+    transition: all 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    background-color: #c8e6c9;
+  }
+
+  button {
+    width: 100%;
+    background-color: #00a652;
+    color: white;
+    padding: 14px 20px;
+    
+    margin: 16px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #007d40;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #result-message {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  a {
+    color: #00a652;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <!-- 로그인 컨테이너 -->
+  <div class="login-container">
+      <h2>로그인</h2>
+      <!-- 로그인 양식 -->
+      <form action="/login" method="post">
+          <!-- 아이디 입력 필드 -->
+          <input type="text" name="username" placeholder="아이디"><br>
+          <!-- 비밀번호 입력 필드 -->
+          <input type="password" name="password" placeholder="비밀번호"><br>
+          <!-- 로그인 버튼 -->
+          <button type="submit">로그인</button>
+      </form>
+      <!-- 회원가입 링크 -->
+      <p>계정이 없으신가요? <a href="/signup">회원가입</a></p>
+      <!-- 로그인 결과 메시지 -->
+      <p id="result-message"></p>
+  </div>
+
+  <script>
+      // 폼과 결과 메시지 요소를 가져옵니다.
+      const form = document.querySelector('form');
+      const resultMessage = document.getElementById('result-message');
+
+      // 폼 제출 이벤트 리스너
+      form.addEventListener('submit', async (event) => {
+          event.preventDefault(); // 기본 동작 방지
+
+          // 폼 데이터 생성
+          const formData = new FormData(form);
+
+          // 로그인 요청을 보내고 응답을 기다립니다.
+          const response = await fetch('/login', {
+              method: 'POST',
+              body: formData
+          });
+
+          // 응답 데이터를 JSON 형식으로 파싱합니다.
+          const data = await response.json();
+
+          // 결과 메시지 업데이트
+          resultMessage.textContent = data.message;
+
+          // 로그인이 성공했을 경우, 연결 페이지로 이동합니다.
+          if (response.status == 200) {
+              window.location.href = '/connect';
+          }
+      });
+  </script>
+</body>
+</html>

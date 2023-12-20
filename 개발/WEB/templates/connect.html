@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴지통</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: white;
+        }
+        .container {
+            position: relative;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .container:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 5px solid #4CAF50;
+            border-radius: 25px;
+            z-index: -1;
+        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            color: #555;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .red-button {
+            background-color: #e74c3c;
+        }
+        .red-button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+    <meta http-equiv="refresh" content="5"> <!-- 5초마다 새로고침 -->
+</head>
+<body>
+    <!-- 컨테이너 섹션 -->
+    <div class="container">
+        <h1>휴지통 용량</h1>
+        <!-- 현재 용량 출력 -->
+        <p><strong>현재 용량:</strong> {{ capacity }}%</p>
+        <!-- 휴지통 출발 요청 버튼 -->
+        <button id="startTrashButton">휴지통 출발 요청</button>
+        <!-- 휴지통 멈춤 요청 버튼 -->
+        <button id="stopTrashButton" class="red-button">휴지통 멈춤 요청</button>
+    </div>
+
+    <script>
+        // 휴지통 출발 요청 함수
+        async function startTrash() {
+            const response = await fetch('/start', { method: 'POST' });
+
+            if (response.ok) {
+                alert('휴지통 출발 요청 완료');
+            } else {
+                alert('휴지통 출발 요청 실패');
+            }
+        }
+
+        // 휴지통 멈춤 요청 함수
+        async function stopTrash() {
+            const response = await fetch('/stop', { method: 'POST' });
+
+            if (response.ok) {
+                alert('휴지통 멈춤 요청 완료');
+            } else {
+                alert('휴지통 멈춤 요청 실패');
+            }
+        }
+
+        // 휴지통 출발 요청 버튼에 이벤트 리스너 추가
+        document.getElementById('startTrashButton').addEventListener('click', startTrash);
+        // 휴지통 멈춤 요청 버튼에 이벤트 리스너 추가
+        document.getElementById('stopTrashButton').addEventListener('click', stopTrash);
+    </script>
+</body>
+</html>
